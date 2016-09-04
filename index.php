@@ -1,7 +1,7 @@
 <?php
 ob_start();
-define('API_KEY','token');
-$admin = "159887854";
+define('API_KEY','254132936:AAFK0D9AZHQ9ay5_dCsEnBaJfDbvP4vtg30');
+$admin = "190647723";
 function bot($method,$datas=[]){
     $url = "https://api.telegram.org/bot".API_KEY."/".$method;
     $ch = curl_init();
@@ -45,7 +45,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/DontEdit_BOT?startgroup=new";
+  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/editnakonaghaBOT?startgroup=new";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -53,10 +53,10 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'alireza_PT','url'=>'https://telegram.me/alireza_PT']
+          ['text'=>'shereyder','url'=>'https://telegram.me/shereyder']
         ],
         [
-          ['text'=>'CreateBOT','url'=>'https://telegram.me/create_antispam_bot']
+          ['text'=>'TEAM','url'=>'https://telegram.me/cliTEAM']
         ]
       ]
     ])

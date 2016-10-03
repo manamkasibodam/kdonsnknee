@@ -30,9 +30,7 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
-  گفتی:
-".$jsu;
+  $text = "<b>"/del"
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -53,10 +51,10 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'سازنده ربات','url'=>'https://telegram.me/shereyder']
+          ['text'=>'😐سازنده ربات😐','url'=>'https://telegram.me/shereyder']
         ],
         [
-          ['text'=>'کانال ما','url'=>'https://telegram.me/cliteam']
+          ['text'=>'😐کانال ما😐','url'=>'https://telegram.me/cliteam']
         ]
       ]
     ])

@@ -30,7 +30,7 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>"/del"
+  $text = "/del"
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,

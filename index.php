@@ -30,9 +30,7 @@ if (isset($update->edited_message)){
   $eid = $editm->message_id;
   $edname = $editm->from->first_name;
   $jsu = json_decode(file_get_contents(__DIR__.'/users/'.$eid.'.json'));
-  $text = "<b>".$edname."</b>\nمن دیدم که چی گفتی بازم ادیت کنی میفهمم
-  گفتی:
-".$jsu;
+  $text = "/del"
   $id = $update->edited_message->chat->id;
   bot('sendmessage',[
     'chat_id'=>$id,
@@ -45,7 +43,7 @@ if (isset($update->edited_message)){
   //$up = file_get_contents(__DIR__.'/users/'.$eid.'.json');
   //str_replace("edited_message","message",$up);
 }elseif(preg_match('/^\/([Ss]tart)/',$text1)){
-  $text = "به ربات ادیت نکن\nخوش آمدید\nبرای اد کردن من به گروه بر روی لینک زیر بزنید\nhttps://telegram.me/editnakonaghaBOT?startgroup=new";
+  $text = "سلام ، به ربات ادیت نکن خوش اومدی شما میتونید منو داخل گروه ادد کنید تا پیام هایی که ادیت میشه پاک کنم!.\nhttps://telegram.me/idrobotshoma?startgroup=new";
   bot('sendmessage',[
     'chat_id'=>$chat_id,
     'text'=>$text,
@@ -53,10 +51,10 @@ if (isset($update->edited_message)){
     'reply_markup'=>json_encode([
       'inline_keyboard'=>[
         [
-          ['text'=>'shereyder','url'=>'https://telegram.me/shereyder']
+          ['text'=>'SHEREYDER','url'=>'https://telegram.me/shereyder']
         ],
         [
-          ['text'=>'TEAM','url'=>'https://telegram.me/cliTEAM']
+          ['text'=>'CHANNEL','url'=>'https://telegram.me/cliteam']
         ]
       ]
     ])
@@ -69,7 +67,6 @@ if (isset($update->edited_message)){
       'chat_id'=>$chat_id,
       'text'=>"کاربران : $mmemcount 👤 "
     ]);
-
 }elseif(isset($update->message-> new_chat_member )){
 bot('sendMessage',[
       'chat_id'=>$chat_id,
